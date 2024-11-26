@@ -1,16 +1,20 @@
 import express from 'express';
+import { Book } from './models/models.js';
 import {PORT ,MONGO_URL} from "./config.js";
 import mongoose from "mongoose";
+import router from './routes/Routes.js';
+import cors from 'cors'
 
 
 
 const app = express();
+app.use(cors())
+app.use(express.json());
+app.use('/books',router)
 
-app.post('/createbook' ,(req,res)=>{
-    
-} )
 
 app.get('/',(req,res)=>{
+    res.send('Welcome to BooK store')
 
     
 });
