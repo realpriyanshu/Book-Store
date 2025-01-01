@@ -17,8 +17,7 @@ export default function Home(){
 
 	const [loading , setLoading] = useState(false);
 	const [books , setBooks] = useState([]);
-	const [showtype , setShowType] = useState("table");
-	// const [dark , setDark] = useState("dark")
+	const [showtype , setShowType] = useState("table")
 	const [dark , setDark] = useRecoilState(darkMode)
 
 

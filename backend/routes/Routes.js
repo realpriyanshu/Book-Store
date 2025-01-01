@@ -1,8 +1,6 @@
 import express from 'express';
 import { Book } from '../models/models.js';
 
-
-
 const router = express.Router()
 
 //Route for creaing a new Book
@@ -41,6 +39,7 @@ router.get('/',async(req,res)=>{
     }
 
 })
+
 router.get('/:id',async(req,res)=>{
     const {id}= req.params;
     try {
